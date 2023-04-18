@@ -76,6 +76,7 @@ function App() {
           </ListGroup>
 
           <div id="map">
+            <h2>Map</h2>
             {mapIsDisplaying && (
               <Image
                 id="cityMap"
