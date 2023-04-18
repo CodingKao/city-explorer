@@ -38,7 +38,7 @@ function App() {
       <Form id="cityForm" onSubmit={handleCitySubmit}>
         <fieldset htmlFor="cityName">
           <legend htmlFor="cityName">
-            Please enter a city of your choice below. This will generate the following data for you: city name, latitude, and longitude. Additionally, it will display a rendered image of the city at a zoom level of 11.
+            Please enter a city:
           </legend>
           <Form.Group className="mb-3">
             <br />
@@ -58,7 +58,7 @@ function App() {
 
       {error ? (
         <Alert variant="danger" id="errorAlert">
-          <Alert.Heading>Error</Alert.Heading>
+          <Alert.Heading>Error.  Please try again.</Alert.Heading>
           <p>{errorMessage}</p>
         </Alert>
       ) : (
@@ -79,7 +79,7 @@ function App() {
             {mapIsDisplaying && (
               <Image
                 id="cityMap"
-                src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_API_KEY}&center=${lat},${lon}&zoom=11`}
+                src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_API_KEY}&center=${lat},${lon}&zoom=10`}
                 alt={city}
               ></Image>
             )}
