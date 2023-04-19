@@ -47,3 +47,6 @@ Start time: 1:30 pm
 Finish time: 7:30 pm
 
 Actual time needed to complete: 6 hours
+
+## WRRC
+![WRRC](./src/image_360.png)
