@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Alert, Form, Button, ListGroup, Image } from 'react-bootstrap';
 import './App.css';
 import Weather from './components/weather';
+import Main from './components/main';
 
 function App() {
   const [city, setCity] = useState('');
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <>
-      <h1>City Explorer</h1>
+      {/* <h1>City Explorer</h1>
       <Form id="cityForm" onSubmit={handleCitySubmit}>
         <fieldset htmlFor="cityName">
           <legend htmlFor="cityName">
@@ -63,8 +64,8 @@ function App() {
           <p>{errorMessage}</p>
         </Alert>
       ) : (
-        <>
-          <ListGroup id="lat-lon">
+        <> */}
+          {/* <ListGroup id="lat-lon">
             <ListGroup.Item variant="primary" id="thisCity">
               {city}
             </ListGroup.Item>
@@ -85,12 +86,13 @@ function App() {
                 alt={city}
               ></Image>
             )}
-          </div>
-              <Weather />
+          </div> */}
+              {/* <Weather /> */}
+              <Main />
         </>
       )}
-    </>
-  );
-}
+    // </>
+  // );
+// }
 
 export default App;
