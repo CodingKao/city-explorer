@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import { Alert, Form, Button, ListGroup, Image } from 'react-bootstrap';
 import './App.css';
+import Weather from './components/weather';
 
 function App() {
   const [city, setCity] = useState('');
@@ -85,6 +86,7 @@ function App() {
               ></Image>
             )}
           </div>
+              <Weather />
         </>
       )}
     </>
