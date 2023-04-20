@@ -52,7 +52,8 @@ class Main extends React.Component {
                 error: false,
                 showMap: true,
             })
-            this.handleWeather(this.state.lat, this.state.lon);
+            console.log(cityData.data[0]);
+            this.handleWeather(cityData.data[0].lat, cityData.data[0].lon);
         } catch(error){
             this.setState({
                 error: true,
@@ -65,16 +66,16 @@ class Main extends React.Component {
         
     }
 
-    handleWeather = async (lat,lon) => {
+    handleWeather = async () => {
         // event.preventDefault();
         try {
-            let url = `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}&lat=${lat}&lon=${lon}`;
+            let url = `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}`;
             console.log('url', url);
             let weatherData = await axios.get(url);
-
+            // console.log(weatherData);
             this.setState({
-                weatherData: weatherData.data.description,
-                dateData: weatherData.data.valid_date,
+                weatherData: weatherData.data,
+                // dateData: weatherData.data.valid_date,
                 showWeather: true,
             })
             
@@ -88,6 +89,7 @@ class Main extends React.Component {
     }
 
     render() {
+        console.log('this.state.weatherData',this.state.weatherData);
         return (
             <>
                 <Container fluid>
@@ -132,7 +134,7 @@ class Main extends React.Component {
                         }
                         {
                             this.state.showWeather
-                            ? <Weather weatherData={this.state.weatherData} dateData={this.state.dateData} />
+                            ? <Weather weatherData={this.state.weatherData} cityData={this.state.cityData} />
                             : <></>
                         }
                 </Container>
