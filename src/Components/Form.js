@@ -7,7 +7,7 @@ const CityForm = ({ onFormSubmit, onCityInputChange }) => (
             <Form.Label>Type a City Name</Form.Label>
         </Form.Group>
         <Form.Group>
-            <Form.Control type="text" onChange={onCityInputChange} />
+            <Form.Control type="text" onChange={onCityInputChange} placeholder='e.g Seattle'/>
         </Form.Group>
         <Form.Group>
             <Button className='city-button' type='submit'>Explore!</Button>
