@@ -128,11 +128,11 @@ class Main extends React.Component {
                             </>
                     }
                     {
-                        this.state.showWeather
-                            ? <Weather weatherData={this.state.weatherData} cityData={this.state.cityData} />
-                            : <></>
+                        this.state.showWeather&&
+                             <Weather weatherData={this.state.weatherData} cityData={this.state.cityData} />
+                            // : <>Test</>
                     }
-                </Container>
+                            </Container>
             </>
         )
     }
