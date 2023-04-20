@@ -11,7 +11,7 @@ class CityWeather extends React.Component {
         const { forecasts } = this.props;
         return (
             <div>
-                <h3>7 Day Forecast</h3>
+                <h3>Weather Forecast</h3>
                 {forecasts.map((forecast, index) => (
                     <Card key={index} style={{ marginBottom: '1rem' }}>
                         <Card.Header>

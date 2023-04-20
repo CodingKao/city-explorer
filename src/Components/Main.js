@@ -62,7 +62,7 @@ class Main extends React.Component {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className='city-header'>Travel Around The Globe From Home</h2>
+                        <h2 className='city-header'> Ready to explore?</h2>
                         <CityForm onFormSubmit={this.getCityData} onCityInputChange={this.handleCityInput} />
                     </Col>
                 </Row>
