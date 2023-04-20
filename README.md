@@ -44,9 +44,9 @@ Estimate of time needed to complete: 4 hours
 
 Start time: 1:30 pm
 
-Finish time: 7:30 pm
+Finish time: 8:30 pm
 
-Actual time needed to complete: 6 hours
+Actual time needed to complete: 7 hours
 
 ## WRRC
 ![WRRC](./src/image_360.png)
