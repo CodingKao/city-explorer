@@ -18,13 +18,13 @@ const CityMovies = ({ movies }) => {
           <Carousel.Item key={movieIndex}>
             <img
               className="d-block w-100"
-              src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
+              src={`https://image.tmdb.org/t/p/w300${movie.poster}`}
               alt={movie.title}
               style={{ maxHeight: '500px', objectFit: 'contain' }}
               />
-              <Carousel.Caption className='carousel-caption' >
                 <h5>{movie.title}</h5>
-              </Carousel.Caption>
+                <p>{movie.overview}</p>
+
           </Carousel.Item>
         ))}
       </Carousel>
