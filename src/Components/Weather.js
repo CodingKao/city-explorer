@@ -1,50 +1,25 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+// import { Card, Button } from 'react-bootstrap';
+import WeatherDay from './WeatherDay';
 
-class CityWeather extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+class Weather extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {};
+    // }
 
+    // eslint-disable-next-line react/require-render-return
     render() {
-        const { forecasts } = this.props;
-        return (
-            <div>
-                <h3>Weather Forecast</h3>
-                {forecasts.map((forecast, index) => (
-                    <Card key={index} style={{ marginBottom: '1rem' }}>
-                        <Card.Header>
-                            {forecast.date}
-                            <Button
-                                variant='link'
-                                onClick={() =>
-                                    this.setState((prevState) => ({
-                                        [index]: !prevState[index],
-                                    }))
-                                }
-                            >
-                                Show/Hide Details
-                            </Button>
-                        </Card.Header>
-                        {this.state[index] && (
-                            <Card.Body>
-                                <Card.Text>
-                                    Description: {forecast.description}
-                                </Card.Text>
-                                <Card.Text>
-                                    High Temperature: {forecast.maxTemp} °F
-                                </Card.Text>
-                                <Card.Text>
-                                    Low Temperature: {forecast.minTemp} °F
-                                </Card.Text>
-                            </Card.Body>
-                        )}
-                    </Card>
-                ))}
-            </div>
-        );
-    }
-}
+        console.log(this.props)
+        // let forecastElements;
+        // if (this.props.forecast) {
+        //     forecastElements = this.props.forecasts.map((forecast) => {
 
-export default CityWeather;
+                return (
+                    <WeatherDay forecast={this.props.forecasts} />
+                )
+                };
+        // }
+    }
+
+export default Weather;
