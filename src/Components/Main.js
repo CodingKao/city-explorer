@@ -63,7 +63,7 @@ class Main extends React.Component {
             <Container>
                 <Row>
                     <Col>
-                        <h2 className='city-header'>Travel Around The Globe From Home</h2>
+                        <h2 className='city-header'>Ready to explore?</h2>
                         <CityForm onFormSubmit={this.getCityData} onCityInputChange={this.handleCityInput} />
                     </Col>
                 </Row>
@@ -95,7 +95,7 @@ class Main extends React.Component {
                 {this.state.movies.length > 0 && (
                     <Row>
                         <Col>
-                            {/* <CityMovies movies={this.state.movies} /> */}
+                            <CityMovies movies={this.state.movies} />
                         </Col>
                     </Row>
                 )}
