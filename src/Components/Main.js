@@ -3,7 +3,7 @@ import axios from 'axios';
 import CityForm from './Form';
 import CityAlert from './Alert';
 import CityCard from './Card';
-import CityWeather from './Weather';
+import Weather from './Weather';
 import CityMovies from './Movie';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
@@ -58,11 +58,12 @@ class Main extends React.Component {
     };
 
     render() {
+        console.log(this.state)
         return (
             <Container>
                 <Row>
                     <Col>
-                        <h2 className='city-header'> Ready to explore?</h2>
+                        <h2 className='city-header'>Travel Around The Globe From Home</h2>
                         <CityForm onFormSubmit={this.getCityData} onCityInputChange={this.handleCityInput} />
                     </Col>
                 </Row>
@@ -87,14 +88,14 @@ class Main extends React.Component {
                 {this.state.showWeather && (
                     <Row>
                         <Col>
-                            <CityWeather forecasts={this.state.forecasts} />
+                            <Weather forecasts={this.state.forecasts} />
                         </Col>
                     </Row>
                 )}
                 {this.state.movies.length > 0 && (
                     <Row>
                         <Col>
-                            <CityMovies movies={this.state.movies} />
+                            {/* <CityMovies movies={this.state.movies} /> */}
                         </Col>
                     </Row>
                 )}
