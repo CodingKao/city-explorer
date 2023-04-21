@@ -24,7 +24,6 @@ class WeatherDay extends React.Component {
                                 Show/Hide Details
                             </Button>
                         </Card.Header>
-                        {/* {this.state[index] && ( */}
                             <Card.Body>
                                 <Card.Text>
                                     Description: {forecast.description}
@@ -36,7 +35,6 @@ class WeatherDay extends React.Component {
                                     Low Temperature: {forecast.minTemp} °F
                                 </Card.Text>
                             </Card.Body>
-                        {/* )} */}
                     </Card>
                 ))}
             </div>
