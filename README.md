@@ -93,15 +93,12 @@ Actual time needed to complete: 5 hours
 
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Name of feature: Lab 9 Feature 1 - 2
+Name of feature: Lab 10 Feature 1
 
-Estimate of time needed to complete: 4 hours
+Estimate of time needed to complete: 6 hours
 
-Start time: 1 pm
+Start time: 2 pm
 
-Finish time: 6 pm
+Finish time: 7 pm
 
 Actual time needed to complete: 5 hours
-
-## WRCC
-![WRRC](./src/image_720.png)
